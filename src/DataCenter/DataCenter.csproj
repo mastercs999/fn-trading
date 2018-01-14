@@ -130,7 +130,7 @@
       <Project>{499418c7-5406-49f1-9e40-9dd586e178d7}</Project>
       <Name>Accord.Statistics</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Alglib\Alglib\Alglib.csproj">
+    <ProjectReference Include="..\Alglib\Alglib.csproj">
       <Project>{95ef0835-8c05-494b-bfa8-6c536a2233fb}</Project>
       <Name>Alglib</Name>
     </ProjectReference>
