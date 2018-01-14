@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24122663-5561-48CC-AD14-B6CBC627530B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accord.Core</RootNamespace>
+    <AssemblyName>Accord.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AForge\Delegates.cs" />
+    <Compile Include="AForge\DoublePoint.cs" />
+    <Compile Include="AForge\EventArgs.cs" />
+    <Compile Include="AForge\Exceptions.cs" />
+    <Compile Include="AForge\IntPoint.cs" />
+    <Compile Include="AForge\Point.cs" />
+    <Compile Include="AForge\PolishExpression.cs" />
+    <Compile Include="AForge\SystemTools.cs" />
+    <Compile Include="AForge\ThreadSafeRandom.cs" />
+    <Compile Include="Attributes\IntegerAttribute.cs" />
+    <Compile Include="Attributes\RealAttribute.cs" />
+    <Compile Include="Attributes\SerializationBinderAttribute.cs" />
+    <Compile Include="Attributes\SourceTypeAttribute.cs" />
+    <Compile Include="Cast.cs" />
+    <Compile Include="Collections\KeyValuePairComparer`2.cs" />
+    <Compile Include="Collections\ReadOnlyDictionary.cs" />
+    <Compile Include="Collections\ReadOnlyOrderedDictionary.cs" />
+    <Compile Include="Collections\RedBlackTreeDictionary`2.cs" />
+    <Compile Include="Collections\RedBlackTreeNode.cs" />
+    <Compile Include="Collections\RedBlackTree`1.cs" />
+    <Compile Include="Collections\RedBlackTree`2.cs" />
+    <Compile Include="Collections\TwoWayDictionary.cs" />
+    <Compile Include="Compatibility\AggregateException.cs" />
+    <Compile Include="Compatibility\CancellationToken.cs" />
+    <Compile Include="Compatibility\Complex.cs" />
+    <Compile Include="Compatibility\ConcurrentBag.cs" />
+    <Compile Include="Compatibility\ConcurrentStack.cs" />
+    <Compile Include="Compatibility\IReadOnlyCollection.cs" />
+    <Compile Include="Compatibility\IReadOnlyDictionary.cs" />
+    <Compile Include="Compatibility\ISet.cs" />
+    <Compile Include="Compatibility\Lazy.cs" />
+    <Compile Include="Compatibility\Parallel.cs" />
+    <Compile Include="Compatibility\SortedSet.cs" />
+    <Compile Include="Compatibility\SpinLock.cs" />
+    <Compile Include="Compatibility\ThreadLocal.cs" />
+    <Compile Include="Compatibility\Tuple.cs" />
+    <Compile Include="Exceptions\ConvergenceException.cs" />
+    <Compile Include="Exceptions\DimensionMismatchException.cs" />
+    <Compile Include="Exceptions\NonPositiveDefiniteMatrixException.cs" />
+    <Compile Include="Exceptions\NonSymmetricMatrixException.cs" />
+    <Compile Include="Exceptions\SingularMatrixException.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ranges\ByteRange.cs" />
+    <Compile Include="Ranges\DoubleRange.cs" />
+    <Compile Include="Ranges\IntRange.cs" />
+    <Compile Include="Ranges\IRange`1.cs" />
+    <Compile Include="Ranges\Range.cs" />
+    <Compile Include="Serializer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

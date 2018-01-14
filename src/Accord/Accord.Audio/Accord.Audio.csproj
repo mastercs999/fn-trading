@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF9C0F37-E505-46D8-85EF-A6EBA62EC34B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accord.Audio</RootNamespace>
+    <AssemblyName>Accord.Audio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioSourceMixer.cs" />
+    <Compile Include="ComplexFilters\Base\BaseComplexFilter.cs" />
+    <Compile Include="ComplexFilters\Base\IComplexFilter.cs" />
+    <Compile Include="ComplexFilters\CombFilter.cs" />
+    <Compile Include="ComplexFilters\DifferentialRectificationFilter.cs" />
+    <Compile Include="ComplexFilters\EnvelopeFilter.cs" />
+    <Compile Include="ComplexFilters\IComplexFilterBank.cs" />
+    <Compile Include="Events\AudioOutputErrorEventArgs.cs" />
+    <Compile Include="Events\AudioSourceErrorEventArgs.cs" />
+    <Compile Include="Events\NewFrameEventArgs.cs" />
+    <Compile Include="Events\NewFrameRequestedEventArgs.cs" />
+    <Compile Include="Events\PlayFrameEventArgs.cs" />
+    <Compile Include="Exceptions\AudioException.cs" />
+    <Compile Include="Exceptions\InvalidSignalPropertiesException.cs" />
+    <Compile Include="Exceptions\UnsupportedSampleFormatException.cs" />
+    <Compile Include="Filters\Base\BaseFilter.cs" />
+    <Compile Include="Filters\Base\BaseInPlaceFilter.cs" />
+    <Compile Include="Filters\Base\IFilter.cs" />
+    <Compile Include="Filters\Base\IInPlaceFilter.cs" />
+    <Compile Include="Filters\EnvelopeFilter.cs" />
+    <Compile Include="Filters\ExtractChannel.cs" />
+    <Compile Include="Filters\HighPassFilter.cs" />
+    <Compile Include="Filters\LowPassFilter.cs" />
+    <Compile Include="Filters\SignalConverter.cs" />
+    <Compile Include="Filters\VolumeFilter.cs" />
+    <Compile Include="Filters\WaveRectifier.cs" />
+    <Compile Include="Formats\FrameInfo.cs" />
+    <Compile Include="Formats\IAudioDecoder.cs" />
+    <Compile Include="Formats\IAudioEncoder.cs" />
+    <Compile Include="Generators\CosineGenerator.cs" />
+    <Compile Include="Generators\ImpulseGenerator.cs" />
+    <Compile Include="Generators\ISignalGenerator.cs" />
+    <Compile Include="Generators\SignalGenerator.cs" />
+    <Compile Include="Generators\SineGenerator.cs" />
+    <Compile Include="Generators\SquareGenerator.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IAudioOutput.cs" />
+    <Compile Include="IAudioSource.cs" />
+    <Compile Include="Metronome.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleConverter.cs" />
+    <Compile Include="Signals\ComplexSignal.cs" />
+    <Compile Include="Signals\Signal.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="Windows\BlackmanWindow.cs" />
+    <Compile Include="Windows\Extensions.cs" />
+    <Compile Include="Windows\IWindow.cs" />
+    <Compile Include="Windows\RaisedCosineWindow.cs" />
+    <Compile Include="Windows\RectangularWindow.cs" />
+    <Compile Include="Windows\WindowBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accord.Core\Accord.Core.csproj">
+      <Project>{24122663-5561-48cc-ad14-b6cbc627530b}</Project>
+      <Name>Accord.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Accord.Math\Accord.Math.csproj">
+      <Project>{9f4c381b-ff34-4315-932f-cc04b6fc0f1d}</Project>
+      <Name>Accord.Math</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F4C381B-FF34-4315-932F-CC04B6FC0F1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accord.Math</RootNamespace>
+    <AssemblyName>Accord.Math</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AForge\ContinuousHistogram.cs" />
+    <Compile Include="AForge\FourierTransform.cs" />
+    <Compile Include="AForge\Gaussian.cs" />
+    <Compile Include="AForge\Geometry\ClosePointsMergingOptimizer.cs" />
+    <Compile Include="AForge\Geometry\CoplanarPosit.cs" />
+    <Compile Include="AForge\Geometry\FlatAnglesOptimizer.cs" />
+    <Compile Include="AForge\Geometry\GeometryTools.cs" />
+    <Compile Include="AForge\Geometry\GrahamConvexHull.cs" />
+    <Compile Include="AForge\Geometry\IConvexHullAlgorithm.cs" />
+    <Compile Include="AForge\Geometry\IShapeOptimizer.cs" />
+    <Compile Include="AForge\Geometry\Line.cs" />
+    <Compile Include="AForge\Geometry\LineSegment.cs" />
+    <Compile Include="AForge\Geometry\LineStraighteningOptimizer.cs" />
+    <Compile Include="AForge\Geometry\PointsCloud.cs" />
+    <Compile Include="AForge\Geometry\POSIT.cs" />
+    <Compile Include="AForge\Geometry\ShapeType.cs" />
+    <Compile Include="AForge\Geometry\SimpleShapeChecker.cs" />
+    <Compile Include="AForge\Matrix3x3.cs" />
+    <Compile Include="AForge\Matrix4x4.cs" />
+    <Compile Include="AForge\Metrics\CosineDistance.cs" />
+    <Compile Include="AForge\Metrics\CosineSimilarity.cs" />
+    <Compile Include="AForge\Metrics\EuclideanDistance.cs" />
+    <Compile Include="AForge\Metrics\EuclideanSimilarity.cs" />
+    <Compile Include="AForge\Metrics\HammingDistance.cs" />
+    <Compile Include="AForge\Metrics\IDistance.cs" />
+    <Compile Include="AForge\Metrics\ISimilarity.cs" />
+    <Compile Include="AForge\Metrics\JaccardDistance.cs" />
+    <Compile Include="AForge\Metrics\ManhattanDistance.cs" />
+    <Compile Include="AForge\Metrics\PearsonCorrelation.cs" />
+    <Compile Include="AForge\PerlinNoise.cs" />
+    <Compile Include="AForge\Random\ExponentialGenerator.cs" />
+    <Compile Include="AForge\Random\GaussianGenerator.cs" />
+    <Compile Include="AForge\Random\IRandomNumberGenerator.cs" />
+    <Compile Include="AForge\Random\StandardGenerator.cs" />
+    <Compile Include="AForge\Random\UniformGenerator.cs" />
+    <Compile Include="AForge\Random\UniformOneGenerator.cs" />
+    <Compile Include="AForge\SVD.cs" />
+    <Compile Include="AForge\Vector3.cs" />
+    <Compile Include="AForge\Vector4.cs" />
+    <Compile Include="Combinatorics.cs" />
+    <Compile Include="Comparers\Accord.Math.Comparers.cs" />
+    <Compile Include="Comparers\ArrayComparer`1.cs" />
+    <Compile Include="Comparers\CustomComparer`1.cs" />
+    <Compile Include="Comparers\ElementComparer.cs" />
+    <Compile Include="Comparers\GeneralComparer.cs" />
+    <Compile Include="Comparers\StableComparer.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Convergence\AbsoluteConvergence.cs" />
+    <Compile Include="Convergence\Base\IConvergence.cs" />
+    <Compile Include="Convergence\Base\ISingleValueConvergence.cs" />
+    <Compile Include="Convergence\GeneralConvergence.cs" />
+    <Compile Include="Convergence\RelativeConvergence.cs" />
+    <Compile Include="Convergence\RelativeParameterConvergence.cs" />
+    <Compile Include="Decompositions\Accord.Math.Decompositions.cs" />
+    <Compile Include="Decompositions\Base\ISolverArrayDecomposition.cs" />
+    <Compile Include="Decompositions\Base\ISolverMatrixDecomposition.cs" />
+    <Compile Include="Decompositions\CholeskyDecomposition.cs" />
+    <Compile Include="Decompositions\CholeskyDecompositionD.cs" />
+    <Compile Include="Decompositions\CholeskyDecompositionF.cs" />
+    <Compile Include="Decompositions\EigenvalueDecomposition.cs" />
+    <Compile Include="Decompositions\EigenvalueDecompositionF.cs" />
+    <Compile Include="Decompositions\GeneralizedEigenvalueDecomposition.cs" />
+    <Compile Include="Decompositions\GramSchmidtOrthogonalization.cs" />
+    <Compile Include="Decompositions\JaggedCholeskyDecomposition.cs" />
+    <Compile Include="Decompositions\JaggedCholeskyDecompositionD.cs" />
+    <Compile Include="Decompositions\JaggedCholeskyDecompositionF.cs" />
+    <Compile Include="Decompositions\JaggedEigenvalueDecomposition.cs" />
+    <Compile Include="Decompositions\JaggedEigenvalueDecompositionF.cs" />
+    <Compile Include="Decompositions\JaggedLuDecomposition.cs" />
+    <Compile Include="Decompositions\JaggedLuDecompositionD.cs" />
+    <Compile Include="Decompositions\JaggedLuDecompositionF.cs" />
+    <Compile Include="Decompositions\JaggedQrDecomposition.cs" />
+    <Compile Include="Decompositions\JaggedQrDecompositionD.cs" />
+    <Compile Include="Decompositions\JaggedQrDecompositionF.cs" />
+    <Compile Include="Decompositions\JaggedSingularValueDecomposition.cs" />
+    <Compile Include="Decompositions\JaggedSingularValueDecompositionF.cs" />
+    <Compile Include="Decompositions\LuDecomposition.cs" />
+    <Compile Include="Decompositions\LuDecompositionD.cs" />
+    <Compile Include="Decompositions\LuDecompositionF.cs" />
+    <Compile Include="Decompositions\NonnegativeMatrixFactorization.cs" />
+    <Compile Include="Decompositions\QrDecomposition.cs" />
+    <Compile Include="Decompositions\QrDecompositionD.cs" />
+    <Compile Include="Decompositions\QrDecompositionF.cs" />
+    <Compile Include="Decompositions\SingularValueDecomposition.cs" />
+    <Compile Include="Decompositions\SingularValueDecompositionF.cs" />
+    <Compile Include="Differentiation\FiniteDifferences.cs" />
+    <Compile Include="Distance.cs" />
+    <Compile Include="Distance.Generated.cs" />
+    <Compile Include="Distances\Base\IDistance.cs" />
+    <Compile Include="Distances\Base\IMetric.cs" />
+    <Compile Include="Distances\Base\ISimilarity.cs" />
+    <Compile Include="Distances\BrayCurtis.cs" />
+    <Compile Include="Distances\Canberra.cs" />
+    <Compile Include="Distances\Chebyshev.cs" />
+    <Compile Include="Distances\Chessboard.cs" />
+    <Compile Include="Distances\Cosine.cs" />
+    <Compile Include="Distances\Dice.cs" />
+    <Compile Include="Distances\Euclidean.cs" />
+    <Compile Include="Distances\Hamming.cs" />
+    <Compile Include="Distances\Hamming`1.cs" />
+    <Compile Include="Distances\Hellinger.cs" />
+    <Compile Include="Distances\Jaccard.cs" />
+    <Compile Include="Distances\Jaccard`1.cs" />
+    <Compile Include="Distances\Kulczynski.cs" />
+    <Compile Include="Distances\Levenshtein.cs" />
+    <Compile Include="Distances\Levenshtein`1.cs" />
+    <Compile Include="Distances\Mahalanobis.cs" />
+    <Compile Include="Distances\Manhattan.cs" />
+    <Compile Include="Distances\Matching.cs" />
+    <Compile Include="Distances\Minkowski.cs" />
+    <Compile Include="Distances\Modular.cs" />
+    <Compile Include="Distances\PearsonCorrelation.cs" />
+    <Compile Include="Distances\RogersTanimoto.cs" />
+    <Compile Include="Distances\RusselRao.cs" />
+    <Compile Include="Distances\SokalMichener.cs" />
+    <Compile Include="Distances\SokalSneath.cs" />
+    <Compile Include="Distances\SquaredMahalanobis.cs" />
+    <Compile Include="Distances\SquareEuclidean.cs" />
+    <Compile Include="Distances\Yule.cs" />
+    <Compile Include="Environments\OctaveEnvironment.cs" />
+    <Compile Include="Environments\REnvironment.cs" />
+    <Compile Include="Formats\Base\IMatrixFormatProvider.cs" />
+    <Compile Include="Formats\Base\MatrixFormatProviderBase.cs" />
+    <Compile Include="Formats\Base\MatrixFormatter.cs" />
+    <Compile Include="Formats\CSharpArrayFormatProvider.cs" />
+    <Compile Include="Formats\CSharpJaggedMatrixFormatProvider.cs" />
+    <Compile Include="Formats\CSharpMatrixFormatProvider.cs" />
+    <Compile Include="Formats\DefaultArrayFormatProvider.cs" />
+    <Compile Include="Formats\DefaultMatrixFormatProvider.cs" />
+    <Compile Include="Formats\OctaveArrayFormatProvider.cs" />
+    <Compile Include="Formats\OctaveMatrixFormatProvider.cs" />
+    <Compile Include="Functions\Bessel.cs" />
+    <Compile Include="Functions\Beta.cs" />
+    <Compile Include="Functions\Gabor.cs" />
+    <Compile Include="Functions\Gamma.cs" />
+    <Compile Include="Functions\Normal.cs" />
+    <Compile Include="Functions\OwensT.cs" />
+    <Compile Include="Geometry\Circle.cs" />
+    <Compile Include="Geometry\ConvexHullDefects.cs" />
+    <Compile Include="Geometry\ConvexityDefect.cs" />
+    <Compile Include="Geometry\DiscreteCurveEvolution.cs" />
+    <Compile Include="Geometry\KCurvature.cs" />
+    <Compile Include="Geometry\Plane.cs" />
+    <Compile Include="Geometry\Point3.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Integration\Accord.Math.Integration.cs" />
+    <Compile Include="Integration\Base\IMultidimensionalIntegration.cs" />
+    <Compile Include="Integration\Base\INumericalIntegration.cs" />
+    <Compile Include="Integration\Base\IUnidimensionalIntegration.cs" />
+    <Compile Include="Integration\InfiniteAdaptiveGaussKronrod.cs" />
+    <Compile Include="Integration\MonteCarloIntegration.cs" />
+    <Compile Include="Integration\NonAdaptiveGaussKronrod.cs" />
+    <Compile Include="Integration\RombergMethod.cs" />
+    <Compile Include="Integration\TrapezoidalRule.cs" />
+    <Compile Include="IO\Mat\MatArrayFlags.cs" />
+    <Compile Include="IO\Mat\MatArrayType.cs" />
+    <Compile Include="IO\Mat\MatDataTag.cs" />
+    <Compile Include="IO\Mat\MatDataType.cs" />
+    <Compile Include="IO\Mat\MatHeader.cs" />
+    <Compile Include="IO\Mat\MatNode.cs" />
+    <Compile Include="IO\Mat\MatReader.cs" />
+    <Compile Include="IO\Mat\MatSparse.cs" />
+    <Compile Include="Kinematics\DenavitHartenbergJoint.cs" />
+    <Compile Include="Kinematics\DenavitHartenbergMatrix.cs" />
+    <Compile Include="Kinematics\DenavitHartenbergModel.cs" />
+    <Compile Include="Kinematics\DenavitHartenbergNode.cs" />
+    <Compile Include="Kinematics\DenavitHartenbergParameter.cs" />
+    <Compile Include="Matrix\Jagged.Construction.cs" />
+    <Compile Include="Matrix\Matrix.Add.Generated.cs" />
+    <Compile Include="Matrix\Matrix.Algebra.cs" />
+    <Compile Include="Matrix\Matrix.Common.cs" />
+    <Compile Include="Matrix\Matrix.Complex.cs" />
+    <Compile Include="Matrix\Matrix.Construction.cs" />
+    <Compile Include="Matrix\Matrix.Conversions.cs" />
+    <Compile Include="Matrix\Matrix.Divide.Generated.cs" />
+    <Compile Include="Matrix\Matrix.Elementwise.cs" />
+    <Compile Include="Matrix\Matrix.Elementwise.Generated.cs" />
+    <Compile Include="Matrix\Matrix.Linear.cs" />
+    <Compile Include="Matrix\Matrix.MinMax.cs" />
+    <Compile Include="Matrix\Matrix.Multiply.Generated.cs" />
+    <Compile Include="Matrix\Matrix.Parsing.cs" />
+    <Compile Include="Matrix\Matrix.Product1.Generated.cs" />
+    <Compile Include="Matrix\Matrix.Selection.cs" />
+    <Compile Include="Matrix\Matrix.Submatrix.cs" />
+    <Compile Include="Matrix\Matrix.Subtract.Generated.cs" />
+    <Compile Include="Matrix\ReducedRowEchelonForm.cs" />
+    <Compile Include="Norm.cs" />
+    <Compile Include="Optimization\Accord.Math.Optimization.cs" />
+    <Compile Include="Optimization\Base\BaseGradientOptimizationMethod.cs" />
+    <Compile Include="Optimization\Base\BaseOptimizationMethod.cs" />
+    <Compile Include="Optimization\Base\IGradientOptimizationMethod.cs" />
+    <Compile Include="Optimization\Base\ILeastSquaresMethod.cs" />
+    <Compile Include="Optimization\Base\IOptimizationMethod.cs" />
+    <Compile Include="Optimization\BinarySearch.cs" />
+    <Compile Include="Optimization\BrentSearch.cs" />
+    <Compile Include="Optimization\Constrained\AugmentedLagrangian.cs" />
+    <Compile Include="Optimization\Constrained\Cobyla.cs" />
+    <Compile Include="Optimization\Constrained\Constraints\IConstraint.cs" />
+    <Compile Include="Optimization\Constrained\Constraints\LinearConstraint.cs" />
+    <Compile Include="Optimization\Constrained\Constraints\LinearConstraintCollection.cs" />
+    <Compile Include="Optimization\Constrained\Constraints\NonlinearConstraint.cs" />
+    <Compile Include="Optimization\Constrained\Constraints\QuadraticConstraint.cs" />
+    <Compile Include="Optimization\Constrained\GoldfarbIdnani.cs" />
+    <Compile Include="Optimization\ExpressionParser.cs" />
+    <Compile Include="Optimization\IObjectiveFunction.cs" />
+    <Compile Include="Optimization\NonlinearObjectiveFunction.cs" />
+    <Compile Include="Optimization\QuadraticObjectiveFunction.cs" />
+    <Compile Include="Optimization\Unconstrained\BoundedBroydenFletcherGoldfarbShanno.cs" />
+    <Compile Include="Optimization\Unconstrained\BoundedBroydenFletcherGoldfarbShanno.FORTRAN.cs" />
+    <Compile Include="Optimization\Unconstrained\BoundedBroydenFletcherGoldfarbShannoInnerStatus.cs" />
+    <Compile Include="Optimization\Unconstrained\BroydenFletcherGoldfarbShanno.cs" />
+    <Compile Include="Optimization\Unconstrained\BroydenFletcherGoldfarbShanno.LIBLBFGS.cs" />
+    <Compile Include="Optimization\Unconstrained\ConjugateGradient.cs" />
+    <Compile Include="Optimization\Unconstrained\FanChenLinQuadraticOptimization.cs" />
+    <Compile Include="Optimization\Unconstrained\Least Squares\GaussNewton.cs" />
+    <Compile Include="Optimization\Unconstrained\Least Squares\LevenbergMarquardt.cs" />
+    <Compile Include="Optimization\Unconstrained\LineSearchFailedException.cs" />
+    <Compile Include="Optimization\Unconstrained\NelderMead.cs" />
+    <Compile Include="Optimization\Unconstrained\OptimizationProgressEventHandler.cs" />
+    <Compile Include="Optimization\Unconstrained\ResilientBackpropagation.cs" />
+    <Compile Include="Optimization\Unconstrained\Subplex.cs" />
+    <Compile Include="Optimization\Unconstrained\TrustRegionNewtonMethod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Random\Generator.cs" />
+    <Compile Include="Special.cs" />
+    <Compile Include="Taylor.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="Transforms\CosineTransform.cs" />
+    <Compile Include="Transforms\FourierTransform2.cs" />
+    <Compile Include="Transforms\HartleyTransform.cs" />
+    <Compile Include="Transforms\HilbertTransform.cs" />
+    <Compile Include="Transforms\SineTransform.cs" />
+    <Compile Include="Vector\Vector.Common.cs" />
+    <Compile Include="Vector\Vector.Construction.cs" />
+    <Compile Include="Vector\Vector.Interval.Generated.cs" />
+    <Compile Include="Vector\Vector.Order.cs" />
+    <Compile Include="Vector\Vector.Random.Generated.cs" />
+    <Compile Include="Vector\Vector.Range.Generated.cs" />
+    <Compile Include="Vector\Vector.Scale.Generated.cs" />
+    <Compile Include="Wavelets\Base\IWavelet.cs" />
+    <Compile Include="Wavelets\CDF97.cs" />
+    <Compile Include="Wavelets\Haar.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accord.Core\Accord.Core.csproj">
+      <Project>{24122663-5561-48cc-ad14-b6cbc627530b}</Project>
+      <Name>Accord.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Comparers\Accord.Math.Comparers.cd" />
+    <None Include="Decompositions\Accord.Math.Decompositions.cd" />
+    <None Include="Integration\Accord.Math.Integration.cd" />
+    <None Include="Optimization\Accord.Math.Optimization.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

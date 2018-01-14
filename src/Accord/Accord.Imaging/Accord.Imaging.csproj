@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BCCDB7E-F882-4EAD-910A-A551E97181F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accord.Imaging</RootNamespace>
+    <AssemblyName>Accord.Imaging</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AForge\Blob.cs" />
+    <Compile Include="AForge\BlobCounter.cs" />
+    <Compile Include="AForge\BlobCounterBase.cs" />
+    <Compile Include="AForge\BlockMatch.cs" />
+    <Compile Include="AForge\Color Reduction\BurkesColorDithering.cs" />
+    <Compile Include="AForge\Color Reduction\ColorErrorDiffusionToAdjacentNeighbors.cs" />
+    <Compile Include="AForge\Color Reduction\ColorImageQuantizer.cs" />
+    <Compile Include="AForge\Color Reduction\ErrorDiffusionColorDithering.cs" />
+    <Compile Include="AForge\Color Reduction\FloydSteinbergColorDithering.cs" />
+    <Compile Include="AForge\Color Reduction\IColorQuantizer.cs" />
+    <Compile Include="AForge\Color Reduction\JarvisJudiceNinkeColorDithering.cs" />
+    <Compile Include="AForge\Color Reduction\MedianCutCube.cs" />
+    <Compile Include="AForge\Color Reduction\MedianCutQuantizer.cs" />
+    <Compile Include="AForge\Color Reduction\OrderedColorDithering.cs" />
+    <Compile Include="AForge\Color Reduction\SierraColorDithering.cs" />
+    <Compile Include="AForge\Color Reduction\StuckiColorDithering.cs" />
+    <Compile Include="AForge\ColorConverter.cs" />
+    <Compile Include="AForge\Complex Filters\FrequencyFilter.cs" />
+    <Compile Include="AForge\Complex Filters\IComplexFilter.cs" />
+    <Compile Include="AForge\ComplexImage.cs" />
+    <Compile Include="AForge\DocumentSkewChecker.cs" />
+    <Compile Include="AForge\Drawing.cs" />
+    <Compile Include="AForge\Exceptions.cs" />
+    <Compile Include="AForge\ExhaustiveBlockMatching.cs" />
+    <Compile Include="AForge\ExhaustiveTemplateMatching.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\Add.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\Difference.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\Intersect.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\Merge.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\Morph.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\MoveTowards.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\StereoAnaglyph.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\Subtract.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\ThresholdedDifference.cs" />
+    <Compile Include="AForge\Filters\2 Source filters\ThresholdedEuclideanDifference.cs" />
+    <Compile Include="AForge\Filters\Adaptive Binarization\BradleyLocalThresholding.cs" />
+    <Compile Include="AForge\Filters\Adaptive Binarization\IterativeThreshold.cs" />
+    <Compile Include="AForge\Filters\Adaptive Binarization\OtsuThreshold.cs" />
+    <Compile Include="AForge\Filters\Adaptive Binarization\SISThreshold.cs" />
+    <Compile Include="AForge\Filters\Base classes\BaseFilter.cs" />
+    <Compile Include="AForge\Filters\Base classes\BaseFilter2.cs" />
+    <Compile Include="AForge\Filters\Base classes\BaseInPlaceFilter.cs" />
+    <Compile Include="AForge\Filters\Base classes\BaseInPlaceFilter2.cs" />
+    <Compile Include="AForge\Filters\Base classes\BaseInPlacePartialFilter.cs" />
+    <Compile Include="AForge\Filters\Base classes\BaseResizeFilter.cs" />
+    <Compile Include="AForge\Filters\Base classes\BaseRotateFilter.cs" />
+    <Compile Include="AForge\Filters\Base classes\BaseTransformationFilter.cs" />
+    <Compile Include="AForge\Filters\Base classes\BaseUsingCopyPartialFilter.cs" />
+    <Compile Include="AForge\Filters\Binarization\BayerDithering.cs" />
+    <Compile Include="AForge\Filters\Binarization\BurkesDithering.cs" />
+    <Compile Include="AForge\Filters\Binarization\ErrorDiffusionDithering.cs" />
+    <Compile Include="AForge\Filters\Binarization\ErrorDiffusionToAdjacentNeighbors.cs" />
+    <Compile Include="AForge\Filters\Binarization\FloydSteinbergDithering.cs" />
+    <Compile Include="AForge\Filters\Binarization\JarvisJudiceNinkeDithering.cs" />
+    <Compile Include="AForge\Filters\Binarization\OrderedDithering.cs" />
+    <Compile Include="AForge\Filters\Binarization\SierraDithering.cs" />
+    <Compile Include="AForge\Filters\Binarization\StuckiDithering.cs" />
+    <Compile Include="AForge\Filters\Binarization\Threshold.cs" />
+    <Compile Include="AForge\Filters\Binarization\ThresholdWithCarry.cs" />
+    <Compile Include="AForge\Filters\Color Filters\BayerFilter.cs" />
+    <Compile Include="AForge\Filters\Color Filters\BayerFilterOptimized.cs" />
+    <Compile Include="AForge\Filters\Color Filters\BrightnessCorrection.cs" />
+    <Compile Include="AForge\Filters\Color Filters\ChannelFiltering.cs" />
+    <Compile Include="AForge\Filters\Color Filters\ColorFiltering.cs" />
+    <Compile Include="AForge\Filters\Color Filters\ColorRemapping.cs" />
+    <Compile Include="AForge\Filters\Color Filters\ContrastCorrection.cs" />
+    <Compile Include="AForge\Filters\Color Filters\ContrastStretch.cs" />
+    <Compile Include="AForge\Filters\Color Filters\EuclideanColorFiltering.cs" />
+    <Compile Include="AForge\Filters\Color Filters\ExtractChannel.cs" />
+    <Compile Include="AForge\Filters\Color Filters\GammaCorrection.cs" />
+    <Compile Include="AForge\Filters\Color Filters\Grayscale.cs" />
+    <Compile Include="AForge\Filters\Color Filters\GrayscaleBT709.cs" />
+    <Compile Include="AForge\Filters\Color Filters\GrayscaleRMY.cs" />
+    <Compile Include="AForge\Filters\Color Filters\GrayscaleToRGB.cs" />
+    <Compile Include="AForge\Filters\Color Filters\GrayscaleY.cs" />
+    <Compile Include="AForge\Filters\Color Filters\HistogramEqualization.cs" />
+    <Compile Include="AForge\Filters\Color Filters\Invert.cs" />
+    <Compile Include="AForge\Filters\Color Filters\LevelsLinear.cs" />
+    <Compile Include="AForge\Filters\Color Filters\LevelsLinear16bpp.cs" />
+    <Compile Include="AForge\Filters\Color Filters\ReplaceChannel.cs" />
+    <Compile Include="AForge\Filters\Color Filters\RotateChannels.cs" />
+    <Compile Include="AForge\Filters\Color Filters\Sepia.cs" />
+    <Compile Include="AForge\Filters\Color Segmentation\SimplePosterization.cs" />
+    <Compile Include="AForge\Filters\Convolution\Blur.cs" />
+    <Compile Include="AForge\Filters\Convolution\Convolution.cs" />
+    <Compile Include="AForge\Filters\Convolution\Edges.cs" />
+    <Compile Include="AForge\Filters\Convolution\GaussianBlur.cs" />
+    <Compile Include="AForge\Filters\Convolution\Mean.cs" />
+    <Compile Include="AForge\Filters\Convolution\Sharpen.cs" />
+    <Compile Include="AForge\Filters\Convolution\SharpenEx.cs" />
+    <Compile Include="AForge\Filters\Edge Detectors\CannyEdgeDetector.cs" />
+    <Compile Include="AForge\Filters\Edge Detectors\DifferenceEdgeDetector.cs" />
+    <Compile Include="AForge\Filters\Edge Detectors\HomogenityEdgeDetector.cs" />
+    <Compile Include="AForge\Filters\Edge Detectors\SobelEdgeDetector.cs" />
+    <Compile Include="AForge\Filters\FilterIterator.cs" />
+    <Compile Include="AForge\Filters\FiltersSequence.cs" />
+    <Compile Include="AForge\Filters\Flood Fillers\PointedColorFloodFill.cs" />
+    <Compile Include="AForge\Filters\Flood Fillers\PointedMeanFloodFill.cs" />
+    <Compile Include="AForge\Filters\HSL Filters\HSLFiltering.cs" />
+    <Compile Include="AForge\Filters\HSL Filters\HSLLinear.cs" />
+    <Compile Include="AForge\Filters\HSL Filters\HueModifier.cs" />
+    <Compile Include="AForge\Filters\HSL Filters\SaturationCorrection.cs" />
+    <Compile Include="AForge\Filters\IFilter.cs" />
+    <Compile Include="AForge\Filters\IFilterInformation.cs" />
+    <Compile Include="AForge\Filters\IInPlaceFilter.cs" />
+    <Compile Include="AForge\Filters\IInPlacePartialFilter.cs" />
+    <Compile Include="AForge\Filters\IlluminationCorrection\FlatFieldCorrection.cs" />
+    <Compile Include="AForge\Filters\Morphology\BottomHat.cs" />
+    <Compile Include="AForge\Filters\Morphology\Closing.cs" />
+    <Compile Include="AForge\Filters\Morphology\Dilatation.cs" />
+    <Compile Include="AForge\Filters\Morphology\Erosion.cs" />
+    <Compile Include="AForge\Filters\Morphology\HitAndMiss.cs" />
+    <Compile Include="AForge\Filters\Morphology\Opening.cs" />
+    <Compile Include="AForge\Filters\Morphology\Specific Optimizations\BinaryDilatation3x3.cs" />
+    <Compile Include="AForge\Filters\Morphology\Specific Optimizations\BinaryErosion3x3.cs" />
+    <Compile Include="AForge\Filters\Morphology\Specific Optimizations\Dilatation3x3.cs" />
+    <Compile Include="AForge\Filters\Morphology\Specific Optimizations\Erosion3.x3.cs" />
+    <Compile Include="AForge\Filters\Morphology\TopHat.cs" />
+    <Compile Include="AForge\Filters\Noise generation\AdditiveNoise.cs" />
+    <Compile Include="AForge\Filters\Noise generation\SaltAndPepperNoise.cs" />
+    <Compile Include="AForge\Filters\Normalized RGB\ExtractNormalizedRGBChannel.cs" />
+    <Compile Include="AForge\Filters\Other\ApplyMask.cs" />
+    <Compile Include="AForge\Filters\Other\BlobsFiltering.cs" />
+    <Compile Include="AForge\Filters\Other\CanvasCrop.cs" />
+    <Compile Include="AForge\Filters\Other\CanvasFill.cs" />
+    <Compile Include="AForge\Filters\Other\CanvasMove.cs" />
+    <Compile Include="AForge\Filters\Other\ConnectedComponentsLabeling.cs" />
+    <Compile Include="AForge\Filters\Other\CornersMarker.cs" />
+    <Compile Include="AForge\Filters\Other\ExtractBiggestBlob.cs" />
+    <Compile Include="AForge\Filters\Other\FillHoles.cs" />
+    <Compile Include="AForge\Filters\Other\HorizontalRunLengthSmoothing.cs" />
+    <Compile Include="AForge\Filters\Other\ImageWarp.cs" />
+    <Compile Include="AForge\Filters\Other\Jitter.cs" />
+    <Compile Include="AForge\Filters\Other\MaskedFilter.cs" />
+    <Compile Include="AForge\Filters\Other\Mirror.cs" />
+    <Compile Include="AForge\Filters\Other\OilPainting.cs" />
+    <Compile Include="AForge\Filters\Other\Pixellate.cs" />
+    <Compile Include="AForge\Filters\Other\SimpleSkeletonization.cs" />
+    <Compile Include="AForge\Filters\Other\TexturedFilter.cs" />
+    <Compile Include="AForge\Filters\Other\TexturedMerge.cs" />
+    <Compile Include="AForge\Filters\Other\Texturer.cs" />
+    <Compile Include="AForge\Filters\Other\VerticalRunLengthSmoothing.cs" />
+    <Compile Include="AForge\Filters\Other\WaterWave.cs" />
+    <Compile Include="AForge\Filters\Smooting\AdaptiveSmooth.cs" />
+    <Compile Include="AForge\Filters\Smooting\BilateralSmoothing.cs" />
+    <Compile Include="AForge\Filters\Smooting\ConservativeSmoothing.cs" />
+    <Compile Include="AForge\Filters\Smooting\Median.cs" />
+    <Compile Include="AForge\Filters\Transform\BackwardQuadrilateralTransformation.cs" />
+    <Compile Include="AForge\Filters\Transform\Crop.cs" />
+    <Compile Include="AForge\Filters\Transform\Quad.cs" />
+    <Compile Include="AForge\Filters\Transform\QuadrilateralTransformation.cs" />
+    <Compile Include="AForge\Filters\Transform\QuadrilateralTransformationBilinear.cs" />
+    <Compile Include="AForge\Filters\Transform\QuadrilateralTransformationNearestNeighbor.cs" />
+    <Compile Include="AForge\Filters\Transform\ResizeBicubic.cs" />
+    <Compile Include="AForge\Filters\Transform\ResizeBilinear.cs" />
+    <Compile Include="AForge\Filters\Transform\ResizeNearestNeighbor.cs" />
+    <Compile Include="AForge\Filters\Transform\RotateBicubic.cs" />
+    <Compile Include="AForge\Filters\Transform\RotateBilinear.cs" />
+    <Compile Include="AForge\Filters\Transform\Shrink.cs" />
+    <Compile Include="AForge\Filters\Transform\SimpleQuadrilateralTransformation.cs" />
+    <Compile Include="AForge\Filters\Transform\TransformFromPolar.cs" />
+    <Compile Include="AForge\Filters\Transform\TransformToPolar.cs" />
+    <Compile Include="AForge\Filters\YCbCr Filters\YCbCrExtractChannel.cs" />
+    <Compile Include="AForge\Filters\YCbCr Filters\YCbCrFiltering.cs" />
+    <Compile Include="AForge\Filters\YCbCr Filters\YCbCrLinear.cs" />
+    <Compile Include="AForge\Filters\YCbCr Filters\YCbCrReplaceChannel.cs" />
+    <Compile Include="AForge\Formats\FITSCodec.cs" />
+    <Compile Include="AForge\Formats\IImageDecoder.cs" />
+    <Compile Include="AForge\Formats\ImageDecoder.cs" />
+    <Compile Include="AForge\Formats\PNMCodec.cs" />
+    <Compile Include="AForge\Formats\Tools.cs" />
+    <Compile Include="AForge\HorizontalIntensityStatistics.cs" />
+    <Compile Include="AForge\HoughCircleTransformation.cs" />
+    <Compile Include="AForge\HoughLineTransformation.cs" />
+    <Compile Include="AForge\IBlobsFilter.cs" />
+    <Compile Include="AForge\IBlockMatching.cs" />
+    <Compile Include="AForge\ICornersDetector.cs" />
+    <Compile Include="AForge\Image.cs" />
+    <Compile Include="AForge\ImageStatistics.cs" />
+    <Compile Include="AForge\ImageStatisticsHSL.cs" />
+    <Compile Include="AForge\ImageStatisticsYCbCr.cs" />
+    <Compile Include="AForge\IntegralImage.cs" />
+    <Compile Include="AForge\Interpolation.cs" />
+    <Compile Include="AForge\ITemplateMatching.cs" />
+    <Compile Include="AForge\MemoryManager.cs" />
+    <Compile Include="AForge\MoravecCornersDetector.cs" />
+    <Compile Include="AForge\QuadrilateralFinder.cs" />
+    <Compile Include="AForge\RecursiveBlobCounter.cs" />
+    <Compile Include="AForge\SusanCornersDetector.cs" />
+    <Compile Include="AForge\TemplateMatch.cs" />
+    <Compile Include="AForge\Textures\CloudsTexture.cs" />
+    <Compile Include="AForge\Textures\ITextureGenerator.cs" />
+    <Compile Include="AForge\Textures\LabyrinthTexture.cs" />
+    <Compile Include="AForge\Textures\MarbleTexture.cs" />
+    <Compile Include="AForge\Textures\TextileTexture.cs" />
+    <Compile Include="AForge\Textures\Texture.cs" />
+    <Compile Include="AForge\Textures\WoodTexture.cs" />
+    <Compile Include="AForge\UnmanagedImage.cs" />
+    <Compile Include="AForge\VerticalIntensityStatistics.cs" />
+    <Compile Include="BagOfVisualWords.cs" />
+    <Compile Include="BagOfVisualWords`1.cs" />
+    <Compile Include="BagOfVisualWords`2.cs" />
+    <Compile Include="Contour\BorderFollowing.cs" />
+    <Compile Include="Contour\IContourExtractionAlgorithm.cs" />
+    <Compile Include="Converters\Accord.Imaging.Converters.cs" />
+    <Compile Include="Converters\ArrayToImage.cs" />
+    <Compile Include="Converters\Base\IConverter.cs" />
+    <Compile Include="Converters\ImageToArray.cs" />
+    <Compile Include="Converters\ImageToMatrix.cs" />
+    <Compile Include="Converters\MatrixToImage.cs" />
+    <Compile Include="Filters\Blend.cs" />
+    <Compile Include="Filters\CombineChannel.cs" />
+    <Compile Include="Filters\CompassConvolution.cs" />
+    <Compile Include="Filters\Concatenate.cs" />
+    <Compile Include="Filters\DifferenceOfGaussians.cs" />
+    <Compile Include="Filters\Exponential.cs" />
+    <Compile Include="Filters\FastVariance.cs" />
+    <Compile Include="Filters\FeaturesMarker.cs" />
+    <Compile Include="Filters\GaborFilter.cs" />
+    <Compile Include="Filters\GrayWorld.cs" />
+    <Compile Include="Filters\HighBoost.cs" />
+    <Compile Include="Filters\KirschEdgeDetector.cs" />
+    <Compile Include="Filters\Kuwahara.cs" />
+    <Compile Include="Filters\LineMarker.cs" />
+    <Compile Include="Filters\Logarithm.cs" />
+    <Compile Include="Filters\NiblackThreshold.cs" />
+    <Compile Include="Filters\PairsMarker.cs" />
+    <Compile Include="Filters\PointsMarker.cs" />
+    <Compile Include="Filters\RectanglesMarker.cs" />
+    <Compile Include="Filters\Rectification.cs" />
+    <Compile Include="Filters\RGChromacity.cs" />
+    <Compile Include="Filters\RobinsonEdgeDetector.cs" />
+    <Compile Include="Filters\SauvolaThreshold.cs" />
+    <Compile Include="Filters\Transform\RotateNearestNeighbor.cs" />
+    <Compile Include="Filters\Variance.cs" />
+    <Compile Include="Filters\WaveletTransform.cs" />
+    <Compile Include="Filters\WhitePatch.cs" />
+    <Compile Include="Filters\WolfJolionThreshold.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="GrayLevelCooccurrenceMatrix.cs" />
+    <Compile Include="GrayLevelDifferenceMethod.cs" />
+    <Compile Include="GrayLevelRunLength.cs" />
+    <Compile Include="IntegralImage2.cs" />
+    <Compile Include="Interest Points\Base\IFeatureDescriptor.cs" />
+    <Compile Include="Interest Points\Base\IFeatureDetector.cs" />
+    <Compile Include="Interest Points\Base\IFeaturePoint.cs" />
+    <Compile Include="Interest Points\CornerFeaturePoint.cs" />
+    <Compile Include="Interest Points\CornerFeaturesDetector.cs" />
+    <Compile Include="Interest Points\FastCornersDetector.cs" />
+    <Compile Include="Interest Points\FeatureDescriptor.cs" />
+    <Compile Include="Interest Points\FREAK\FastRetinaKeypoint.cs" />
+    <Compile Include="Interest Points\FREAK\FastRetinaKeypointDescriptor.cs" />
+    <Compile Include="Interest Points\FREAK\FastRetinaKeypointDetector.cs" />
+    <Compile Include="Interest Points\FREAK\FastRetinaKeypointPattern.cs" />
+    <Compile Include="Interest Points\Haralick\Haralick.cs" />
+    <Compile Include="Interest Points\Haralick\HaralickDescriptor.cs" />
+    <Compile Include="Interest Points\HarrisCornersDetector.cs" />
+    <Compile Include="Interest Points\HistogramsOfOrientedGradients.cs" />
+    <Compile Include="Interest Points\LocalBinaryPattern.cs" />
+    <Compile Include="Interest Points\Matching\CorrelationMatching.cs" />
+    <Compile Include="Interest Points\Matching\KNearestNeighborMatching.cs" />
+    <Compile Include="Interest Points\Matching\KNearestNeighborMatching`1.cs" />
+    <Compile Include="Interest Points\SURF\ResponseLayer.cs" />
+    <Compile Include="Interest Points\SURF\SpeededUpRobustFeaturePoint.cs" />
+    <Compile Include="Interest Points\SURF\SpeededUpRobustFeaturesDescriptor.cs" />
+    <Compile Include="Interest Points\SURF\SpeededUpRobustFeaturesDetector.cs" />
+    <Compile Include="MatrixH.cs" />
+    <Compile Include="Moments\CentralMoments.cs" />
+    <Compile Include="Moments\HuMoments.cs" />
+    <Compile Include="Moments\IMoments.cs" />
+    <Compile Include="Moments\MomentsBase.cs" />
+    <Compile Include="Moments\RawMoments.cs" />
+    <Compile Include="ObjectiveFidelity.cs" />
+    <Compile Include="PointH.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RansacFundamentalEstimator.cs" />
+    <Compile Include="RansacHomographyEstimator.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="UnsafeTools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AForge\Images\adaptive_smooth.png" />
+    <Content Include="AForge\Images\add.png" />
+    <Content Include="AForge\Images\additive_noise.jpg" />
+    <Content Include="AForge\Images\anaglyph.png" />
+    <Content Include="AForge\Images\anaglyph_glasses.png" />
+    <Content Include="AForge\Images\background.jpg" />
+    <Content Include="AForge\Images\backward_quadrilateral.jpg" />
+    <Content Include="AForge\Images\bayer_dithering.jpg" />
+    <Content Include="AForge\Images\bayer_filter.jpg" />
+    <Content Include="AForge\Images\bg.jpg" />
+    <Content Include="AForge\Images\biggest_blob.jpg" />
+    <Content Include="AForge\Images\bilateral.jpg" />
+    <Content Include="AForge\Images\blobs_filtering.jpg" />
+    <Content Include="AForge\Images\blur.jpg" />
+    <Content Include="AForge\Images\bottomhat.png" />
+    <Content Include="AForge\Images\bradley_local_thresholding.png" />
+    <Content Include="AForge\Images\brightness_correction.jpg" />
+    <Content Include="AForge\Images\burkes.jpg" />
+    <Content Include="AForge\Images\canny_edges.png" />
+    <Content Include="AForge\Images\canvas_crop.jpg" />
+    <Content Include="AForge\Images\canvas_move.jpg" />
+    <Content Include="AForge\Images\channel_filtering.jpg" />
+    <Content Include="AForge\Images\closing.png" />
+    <Content Include="AForge\Images\clouds_texture.jpg" />
+    <Content Include="AForge\Images\color_burkes.png" />
+    <Content Include="AForge\Images\color_filtering.jpg" />
+    <Content Include="AForge\Images\color_floyd_steinberg.png" />
+    <Content Include="AForge\Images\color_jarvis_judice_ninke.png" />
+    <Content Include="AForge\Images\color_remapping.jpg" />
+    <Content Include="AForge\Images\color_sierra.png" />
+    <Content Include="AForge\Images\color_stucki.png" />
+    <Content Include="AForge\Images\conservative_smoothing.png" />
+    <Content Include="AForge\Images\contrast_correction.jpg" />
+    <Content Include="AForge\Images\contrast_stretch.jpg" />
+    <Content Include="AForge\Images\crop.jpg" />
+    <Content Include="AForge\Images\deskew.png" />
+    <Content Include="AForge\Images\difference.png" />
+    <Content Include="AForge\Images\difference_edges.png" />
+    <Content Include="AForge\Images\dilatation.png" />
+    <Content Include="AForge\Images\ebm_result.png" />
+    <Content Include="AForge\Images\ebm_sample1.png" />
+    <Content Include="AForge\Images\ebm_sample2.png" />
+    <Content Include="AForge\Images\edges.png" />
+    <Content Include="AForge\Images\emboss.jpg" />
+    <Content Include="AForge\Images\equalized.jpg" />
+    <Content Include="AForge\Images\erosion.png" />
+    <Content Include="AForge\Images\euclidean_filtering.jpg" />
+    <Content Include="AForge\Images\extract_channel.jpg" />
+    <Content Include="AForge\Images\filled_holes.png" />
+    <Content Include="AForge\Images\flat_field.jpg" />
+    <Content Include="AForge\Images\floyd_steinberg.jpg" />
+    <Content Include="AForge\Images\fourier.jpg" />
+    <Content Include="AForge\Images\frequency_filter.jpg" />
+    <Content Include="AForge\Images\from_polar.png" />
+    <Content Include="AForge\Images\gamma.jpg" />
+    <Content Include="AForge\Images\gaussian_blur.jpg" />
+    <Content Include="AForge\Images\gaussian_sharpen.jpg" />
+    <Content Include="AForge\Images\grayscale.jpg" />
+    <Content Include="AForge\Images\hit-and-miss.png" />
+    <Content Include="AForge\Images\homogenity_edges.png" />
+    <Content Include="AForge\Images\hor_histogram.jpg" />
+    <Content Include="AForge\Images\hough_circles.jpg" />
+    <Content Include="AForge\Images\hough_lines.jpg" />
+    <Content Include="AForge\Images\hrls.png" />
+    <Content Include="AForge\Images\hsl_filtering.jpg" />
+    <Content Include="AForge\Images\hsl_filtering2.jpg" />
+    <Content Include="AForge\Images\hsl_linear.jpg" />
+    <Content Include="AForge\Images\hue_modifier.jpg" />
+    <Content Include="AForge\Images\icon.png" />
+    <Content Include="AForge\Images\image_warp.png" />
+    <Content Include="AForge\Images\intersect.png" />
+    <Content Include="AForge\Images\invert.jpg" />
+    <Content Include="AForge\Images\iterative_threshold.png" />
+    <Content Include="AForge\Images\jarvis_judice_ninke.jpg" />
+    <Content Include="AForge\Images\jitter.jpg" />
+    <Content Include="AForge\Images\labeling.jpg" />
+    <Content Include="AForge\Images\labyrinth_texture.jpg" />
+    <Content Include="AForge\Images\levels_linear.jpg" />
+    <Content Include="AForge\Images\marble_texture.jpg" />
+    <Content Include="AForge\Images\mask.png" />
+    <Content Include="AForge\Images\masked_image.jpg" />
+    <Content Include="AForge\Images\mean.png" />
+    <Content Include="AForge\Images\median.png" />
+    <Content Include="AForge\Images\merge.png" />
+    <Content Include="AForge\Images\mirror.jpg" />
+    <Content Include="AForge\Images\morph.png" />
+    <Content Include="AForge\Images\move_towards.png" />
+    <Content Include="AForge\Images\object.jpg" />
+    <Content Include="AForge\Images\oil_painting.jpg" />
+    <Content Include="AForge\Images\opening.png" />
+    <Content Include="AForge\Images\ordered_color_dithering.png" />
+    <Content Include="AForge\Images\ordered_dithering.jpg" />
+    <Content Include="AForge\Images\otsu_threshold.png" />
+    <Content Include="AForge\Images\pixellate.jpg" />
+    <Content Include="AForge\Images\pointed_color_fill.jpg" />
+    <Content Include="AForge\Images\pointed_mean_fill.jpg" />
+    <Content Include="AForge\Images\polar.png" />
+    <Content Include="AForge\Images\posterization.png" />
+    <Content Include="AForge\Images\quadrilateral_bilinear.png" />
+    <Content Include="AForge\Images\quadrilateral_ex_bilinear.png" />
+    <Content Include="AForge\Images\quadrilateral_finder.png" />
+    <Content Include="AForge\Images\quadrilateral_nearest.png" />
+    <Content Include="AForge\Images\reduced_colors.png" />
+    <Content Include="AForge\Images\replace_channel.jpg" />
+    <Content Include="AForge\Images\resize_bicubic.png" />
+    <Content Include="AForge\Images\resize_bilinear.png" />
+    <Content Include="AForge\Images\resize_nearest.png" />
+    <Content Include="AForge\Images\rotate_bicubic.png" />
+    <Content Include="AForge\Images\rotate_bilinear.png" />
+    <Content Include="AForge\Images\rotate_channels.jpg" />
+    <Content Include="AForge\Images\rotate_nearest.png" />
+    <Content Include="AForge\Images\salt_noise.jpg" />
+    <Content Include="AForge\Images\sample1.jpg" />
+    <Content Include="AForge\Images\sample10.png" />
+    <Content Include="AForge\Images\sample11.png" />
+    <Content Include="AForge\Images\sample12.png" />
+    <Content Include="AForge\Images\sample13.png" />
+    <Content Include="AForge\Images\sample14.png" />
+    <Content Include="AForge\Images\sample15.png" />
+    <Content Include="AForge\Images\sample16_left.png" />
+    <Content Include="AForge\Images\sample16_right.png" />
+    <Content Include="AForge\Images\sample17.png" />
+    <Content Include="AForge\Images\sample18.jpg" />
+    <Content Include="AForge\Images\sample19.png" />
+    <Content Include="AForge\Images\sample2.jpg" />
+    <Content Include="AForge\Images\sample20.png" />
+    <Content Include="AForge\Images\sample21.png" />
+    <Content Include="AForge\Images\sample22.png" />
+    <Content Include="AForge\Images\sample23.png" />
+    <Content Include="AForge\Images\sample24.png" />
+    <Content Include="AForge\Images\sample3.jpg" />
+    <Content Include="AForge\Images\sample4.jpg" />
+    <Content Include="AForge\Images\sample5.jpg" />
+    <Content Include="AForge\Images\sample6.png" />
+    <Content Include="AForge\Images\sample7.png" />
+    <Content Include="AForge\Images\sample8.jpg" />
+    <Content Include="AForge\Images\sample9.png" />
+    <Content Include="AForge\Images\saturation_correction.jpg" />
+    <Content Include="AForge\Images\sepia.jpg" />
+    <Content Include="AForge\Images\sharpen.jpg" />
+    <Content Include="AForge\Images\shrink.jpg" />
+    <Content Include="AForge\Images\sierra.jpg" />
+    <Content Include="AForge\Images\simple_skeletonization.png" />
+    <Content Include="AForge\Images\sis_threshold.png" />
+    <Content Include="AForge\Images\sobel_edges.png" />
+    <Content Include="AForge\Images\stucki.jpg" />
+    <Content Include="AForge\Images\subtract.png" />
+    <Content Include="AForge\Images\susan_corners.png" />
+    <Content Include="AForge\Images\textile_texture.jpg" />
+    <Content Include="AForge\Images\textured_filter1.jpg" />
+    <Content Include="AForge\Images\textured_filter2.jpg" />
+    <Content Include="AForge\Images\textured_merge1.jpg" />
+    <Content Include="AForge\Images\textured_merge2.jpg" />
+    <Content Include="AForge\Images\texturer.jpg" />
+    <Content Include="AForge\Images\thinning.png" />
+    <Content Include="AForge\Images\threshold.jpg" />
+    <Content Include="AForge\Images\thresholded_difference.png" />
+    <Content Include="AForge\Images\thresholded_euclidean_difference.png" />
+    <Content Include="AForge\Images\threshold_carry.jpg" />
+    <Content Include="AForge\Images\tophat.png" />
+    <Content Include="AForge\Images\ver_histogram.jpg" />
+    <Content Include="AForge\Images\vrls.png" />
+    <Content Include="AForge\Images\water_wave.jpg" />
+    <Content Include="AForge\Images\wood_texture.jpg" />
+    <Content Include="AForge\Images\ycbcr_filtering.jpg" />
+    <Content Include="AForge\Images\ycbcr_linear.jpg" />
+    <Content Include="AForge\Images\ycbcr_replace_channel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Converters\Accord.Imaging.Converters.cd" />
+    <None Include="Filters\Accord.Imaging.Filters.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accord.Core\Accord.Core.csproj">
+      <Project>{24122663-5561-48cc-ad14-b6cbc627530b}</Project>
+      <Name>Accord.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Accord.MachineLearning\Accord.MachineLearning.csproj">
+      <Project>{80b16fd2-1cf2-409b-a73e-4a8de9f17ad7}</Project>
+      <Name>Accord.MachineLearning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Accord.Math\Accord.Math.csproj">
+      <Project>{9f4c381b-ff34-4315-932f-cc04b6fc0f1d}</Project>
+      <Name>Accord.Math</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Accord.Statistics\Accord.Statistics.csproj">
+      <Project>{499418c7-5406-49f1-9e40-9dd586e178d7}</Project>
+      <Name>Accord.Statistics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
