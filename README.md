@@ -5,7 +5,7 @@ Trading system based on fundamental analysis.
 This code belongs to my master thesis located [here](thesis/Thesis.pdf). It's a coding part of this thesis.
 
 ## What does it do?
-This program grabs fundamental data from various sources. Cleans them, prepare them and then feeds neural network with them. Neural network creates prediction of stocks which are used for a trading system afterwards.
+This program grabs fundamental data from various sources. Cleans them, prepare them and then feeds neural network with them. Neural network creates predictions of stocks which are used for the trading system afterwards.
 
 ## Data sources
 * Stock prices
