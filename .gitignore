@@ -64,3 +64,9 @@ src/SharpML\.Recurrent/obj/
 src/RnnCenter/bin/
 
 src/RnnCenter/obj/
+
+src/DataCenter/bin/
+
+src/Manager/bin/
+
+src/packages/
