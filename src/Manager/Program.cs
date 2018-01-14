@@ -23,7 +23,7 @@ namespace Manager
             Config config = new Config()
             {
                 Reload = false,
-                DataDirectory = @"c:\Users\MASTER-WORK\Desktop\FNTradingData\",
+                DataDirectory = @"..\..\..\..\data\",
                 QuandlApiKey = "",
                 GoogleCookies = "",
                 ImportantWords = new string[] { "debt", "color", "stocks", "economics", "inflation", "restaurant", "portfolio", "metals", "housing", "dow jones", "revenue", "sell", "bonds", "risk", "car", "credit", "markets", "return", "unemployment", "leverage", "chance", "nasdaq", "money", "society", "war", "religion", "cancer", "growth", "investment", "hedge", "marriage", "transaction", "cash", "economy", "derivatives", "headlines", "profit", "loss", "office", "forex", "finance", "fed", "banking", "stock market", "fine", "crisis", "happy", "gains", "invest", "house" },
